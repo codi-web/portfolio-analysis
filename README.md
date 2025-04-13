@@ -120,7 +120,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más deta
 
 ## Autor
 
-Edwardyv
+codi-web
 
 ## Versión
 
