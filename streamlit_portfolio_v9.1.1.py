@@ -123,7 +123,7 @@ def monte_carlo_simulation(log_returns, cov_matrix, num_portfolios, num_assets):
     return results
 
 def main():
-    st.title("Análisis de Portafolio v9")
+    st.title("Análisis de Portafolio v9.1.1")
 
     # Inicialización de variables de estado
     if 'assets' not in st.session_state:
