@@ -70,8 +70,9 @@ streamlit run streamlit_portfolio_v9.1.1.py
 - Rentabilidad simple acumulativa (Fig 2.)
  ![Fig 2.](assets/simple_profitability.png)
 - Histograma de retornos (Fig 3.)
- ![Fig 2.](assets/returns_histogram.png)
-- Análisis de volatilidad
+ ![Fig 3.](assets/returns_histogram.png)
+- Análisis de volatilidad (Fig 4.)
+  ![Fig 4.](assets/volatility_chart.png)
 - Matriz de correlación
 - Simulación de Monte Carlo
 - Distribución del portafolio óptimo
