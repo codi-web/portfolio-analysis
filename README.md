@@ -107,11 +107,11 @@ streamlit run streamlit_portfolio_v9.1.1.py
 
 - Análisis de sensibilidad (Fig 12.)
 
-![Fig 12.](assets/comparison_benchmark.png)
+![Fig 12.](assets/sensitivity_analysis.png)
 
 - Análisis de escenarios (Fig 13.)
 
-![Fig 13.](assets/comparison_benchmark.png)
+![Fig 13.](assets/scenario_analysis.png)
 
 ### Métricas
 - Retorno esperado
