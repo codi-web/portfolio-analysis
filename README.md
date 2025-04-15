@@ -66,6 +66,8 @@ streamlit run streamlit_portfolio_v9.1.1.py
 
 ### Análisis
 - Gráfico de precios históricos
+- ![Fig.1](assets/historical_prices.png)
+
 - Rentabilidad simple acumulativa
 - Histograma de retornos
 - Análisis de volatilidad
