@@ -78,12 +78,16 @@ streamlit run streamlit_portfolio_v9.1.1.py
  ![Fig 3.](assets/returns_histogram.png)
  
 - Análisis de volatilidad (Fig 4.)
-  
+
   ![Fig 4.](assets/volatility_chart.png)
   
-- Matriz de correlación (Fig 5.)
+- Volatilidad de la rentabilidad (Fig 5.)
+
+  ![Fig 5.](assets/volatility_profitability.png)
   
-  ![Fig 5.](assets/correlation_matrix.png)
+-  Matriz de correlación (Fig 6.)
+  
+  ![Fig 6.](assets/correlation_matrix.png)
   
 - Simulación de Monte Carlo
 - Distribución del portafolio óptimo
