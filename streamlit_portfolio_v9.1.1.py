@@ -123,7 +123,28 @@ def monte_carlo_simulation(log_returns, cov_matrix, num_portfolios, num_assets):
     return results
 
 def main():
-    st.title("Análisis de Portafolio v9.1.1")
+   # st.title("Análisis de Portafolio v9.1.1")
+# Crear columnas para logo y título
+    # Ajusta las proporciones [logo, titulo] según necesites, por ejemplo [1, 5] o [1, 6]
+    col1, col2 = st.columns([1, 6]) 
+    
+    with col1:
+        # --- INICIO CAMBIO LOGO ---
+        # Coloca la ruta a tu archivo de logo aquí. 
+        # Puede ser una ruta relativa (ej. 'images/logo.png') o absoluta.
+        # Asegúrate de que el archivo exista.
+        logo_path = "/home/eyps/anaconda3/envs/streamlit_venv/assets/icons.png" #![Logo](assets/icons.png)<--- CAMBIA ESTO por la ruta a tu logo
+        try:
+            # Ajusta el 'width' según el tamaño deseado para tu logo
+            st.image(logo_path, width=75) 
+        except Exception as e:
+            # Muestra una advertencia si no se puede cargar el logo, pero no detiene la app
+            st.warning(f"Advertencia: No se pudo cargar el logo desde '{logo_path}'. Error: {e}")
+        # --- FIN CAMBIO LOGO ---
+        
+    with col2:
+        st.title("Análisis de Portafolio v9") # El título ahora va en la segunda columna
+
 
     # Inicialización de variables de estado
     if 'assets' not in st.session_state:
