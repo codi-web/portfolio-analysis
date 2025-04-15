@@ -125,27 +125,26 @@ def monte_carlo_simulation(log_returns, cov_matrix, num_portfolios, num_assets):
 def main():
    # st.title("Análisis de Portafolio v9.1.1")
 # Crear columnas para logo y título
-    # Ajusta las proporciones [logo, titulo] según necesites, por ejemplo [1, 5] o [1, 6]
-    col1, col2 = st.columns([1, 6]) 
+    # Ajusta las proporciones [logo, titulo] según necesites, por ejemplo [5, 2] o [6, 1]
+    col1, col2 = st.columns([5, 2]) 
     
-    with col1:
+    with col1: # <-- Columna 1 ahora es para el título
+        st.title("Análisis de Portafolio v9.1.1") 
+        
+    with col2: # <-- Columna 2 ahora es para el logo
         # --- INICIO CAMBIO LOGO ---
         # Coloca la ruta a tu archivo de logo aquí. 
         # Puede ser una ruta relativa (ej. 'images/logo.png') o absoluta.
         # Asegúrate de que el archivo exista.
-        logo_path = "assets/icons.png" #![Logo](assets/icons.png)<--- CAMBIA ESTO por la ruta a tu logo
+        logo_path = "assets/icons.png" # <--- Corregido: Solo la ruta al archivo
         try:
             # Ajusta el 'width' según el tamaño deseado para tu logo
-            st.image(logo_path, width=75) 
+            st.image(logo_path, width=150) # <--- Tamaño aumentado
         except Exception as e:
             # Muestra una advertencia si no se puede cargar el logo, pero no detiene la app
             st.warning(f"Advertencia: No se pudo cargar el logo desde '{logo_path}'. Error: {e}")
         # --- FIN CAMBIO LOGO ---
-        
-    with col2:
-        st.title("Análisis de Portafolio v9") # El título ahora va en la segunda columna
-
-
+    
     # Inicialización de variables de estado
     if 'assets' not in st.session_state:
         # Lista reducida de activos más estables
