@@ -156,7 +156,7 @@ Las contribuciones son bienvenidas. Por favor, abre un issue primero para discut
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+Este proyecto está bajo la Licencia Apache-2.0 - ver el archivo LICENSE para más detalles.
 
 ## Autor
 
