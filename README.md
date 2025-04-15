@@ -124,9 +124,13 @@ streamlit run streamlit_portfolio_v9.1.1.py
 
 ```
 Python_Portafolio/
+├── assets/
+│   ├── logo.png
+│   └── Fig.png
 ├── streamlit_portfolio_v9.py
 ├── requirements.txt
 └── README.md
+
 ```
 
 ## Dependencias Principales
