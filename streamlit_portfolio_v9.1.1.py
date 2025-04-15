@@ -139,7 +139,7 @@ def main():
         logo_path = "assets/icons.png" # <--- Corregido: Solo la ruta al archivo
         try:
             # Ajusta el 'width' según el tamaño deseado para tu logo
-            st.image(logo_path, width=150) # <--- Tamaño aumentado
+            st.image(logo_path, width=300) # <--- Tamaño aumentado
         except Exception as e:
             # Muestra una advertencia si no se puede cargar el logo, pero no detiene la app
             st.warning(f"Advertencia: No se pudo cargar el logo desde '{logo_path}'. Error: {e}")
