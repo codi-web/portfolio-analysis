@@ -118,7 +118,6 @@ streamlit run streamlit_portfolio_v9.1.1.py
 - Volatilidad
 - Ratio de Sharpe
 - Ratio de Sortino
-- CVaR (Conditional Value at Risk)
 
 ## Estructura del Proyecto
 
