@@ -67,29 +67,32 @@ streamlit run streamlit_portfolio_v9.1.1.py
 ### Análisis
 - Gráfico de precios históricos (Fig 1.)
   
-   ![Fig.1](assets/historical_prices.png)
+![Fig.1](assets/historical_prices.png)
   
 - Rentabilidad simple acumulativa (Fig 2.)
   
- ![Fig 2.](assets/simple_profitability.png)
+![Fig 2.](assets/simple_profitability.png)
  
 - Histograma de retornos (Fig 3.)
   
- ![Fig 3.](assets/returns_histogram.png)
+![Fig 3.](assets/returns_histogram.png)
  
 - Análisis de volatilidad (Fig 4.)
 
-  ![Fig 4.](assets/volatility_chart.png)
+![Fig 4.](assets/volatility_chart.png)
   
 - Volatilidad de la rentabilidad (Fig 5.)
 
-  ![Fig 5.](assets/volatility_profitability.png)
+![Fig 5.](assets/volatility_profitability.png)
   
 -  Matriz de correlación (Fig 6.)
   
-  ![Fig 6.](assets/correlation_matrix.png)
+![Fig 6.](assets/correlation_matrix.png)
   
-- Simulación de Monte Carlo
+- Simulación de Monte Carlo (Fig 7.)
+
+![Fig 7.](assets/monte_carlo_simulation.png)
+
 - Distribución del portafolio óptimo
 - Distribución del valor en euros
 - Comparación con benchmark
