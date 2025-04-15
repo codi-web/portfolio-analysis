@@ -93,8 +93,14 @@ streamlit run streamlit_portfolio_v9.1.1.py
 
 ![Fig 7.](assets/monte_carlo_simulation.png)
 
-- Distribución del portafolio óptimo
-- Distribución del valor en euros
+- Distribución del portafolio óptimo (Fig 8.)
+
+![Fig 8.](assets/optimal_portfolio_distribution.png)
+
+- Distribución del valor en euros (Fig 8A.)
+
+![Fig 8A.](assets/distribution_value_euros.png)
+
 - Comparación con benchmark
 - Análisis de sensibilidad
 - Análisis de escenarios
