@@ -101,9 +101,17 @@ streamlit run streamlit_portfolio_v9.1.1.py
 
 ![Fig 8A.](assets/distribution_value_euros.png)
 
-- Comparación con benchmark
-- Análisis de sensibilidad
-- Análisis de escenarios
+- Comparación con benchmark (Fig 11.)
+
+![Fig 11.](assets/comparison_benchmark.png)
+
+- Análisis de sensibilidad (Fig 12.)
+
+![Fig 12.](assets/comparison_benchmark.png)
+
+- Análisis de escenarios (Fig 13.)
+
+![Fig 13.](assets/comparison_benchmark.png)
 
 ### Métricas
 - Retorno esperado
