@@ -126,7 +126,7 @@ def main():
    # st.title("Análisis de Portafolio v9.1.1")
 # Crear columnas para logo y título
     # Ajusta las proporciones [logo, titulo] según necesites, por ejemplo [5, 2] o [6, 1]
-    col1, col2 = st.columns([5, 2]) 
+    col1, col2 = st.columns([8, 1]) 
     
     with col1: # <-- Columna 1 ahora es para el título
         st.title("Análisis de Portafolio v9.1.1") 
