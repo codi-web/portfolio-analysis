@@ -122,8 +122,7 @@ def monte_carlo_simulation(log_returns, cov_matrix, num_portfolios, num_assets):
 
     return results
 
-def main():
-   # st.title("Análisis de Portafolio v9.1.1")
+def main():  
 # Crear columnas para logo y título
     # Ajusta las proporciones [logo, titulo] según necesites, por ejemplo [5, 2] o [6, 1]
     col1, col2 = st.columns([5, 3]) 
@@ -133,17 +132,11 @@ def main():
         
     with col2: # <-- Columna 2 ahora es para el logo
         # --- INICIO CAMBIO LOGO ---
-        # Coloca la ruta a tu archivo de logo aquí. 
-        # Puede ser una ruta relativa (ej. 'images/logo.png') o absoluta.
-        # Asegúrate de que el archivo exista.
-        logo_path = "assets/icons.png" # <--- Corregido: Solo la ruta al archivo
+        logo_path = "assets/icons.png" 
         try:
-            # Ajusta el 'width' según el tamaño deseado para tu logo
             st.image(logo_path, width=300) # <--- Tamaño aumentado
         except Exception as e:
-            # Muestra una advertencia si no se puede cargar el logo, pero no detiene la app
             st.warning(f"Advertencia: No se pudo cargar el logo desde '{logo_path}'. Error: {e}")
-        # --- FIN CAMBIO LOGO ---
     
     # Inicialización de variables de estado
     if 'assets' not in st.session_state:
@@ -156,7 +149,7 @@ def main():
         
     if 'num_portfolios' not in st.session_state:
         # Reducir el valor por defecto para mejorar la latencia inicial
-        st.session_state.num_portfolios = 20000 # Antes era 100000 
+        st.session_state.num_portfolios = 10000 
     if 'total_money' not in st.session_state:
         st.session_state.total_money = 10000
     if 'benchmark' not in st.session_state:
