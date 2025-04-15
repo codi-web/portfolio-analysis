@@ -11,7 +11,7 @@ Esta aplicación web desarrollada con Streamlit permite realizar análisis de po
 - Visualización de datos mediante diferentes tipos de gráficos
 - Comparación con benchmark
 - Análisis de sensibilidad y escenarios
-- Interfaz de usuario intuitiva y responsive
+- Interfaz de usuario intuitiva y sensible
 
 ## Requisitos
 
