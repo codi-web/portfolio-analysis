@@ -133,7 +133,7 @@ def main():
         # Coloca la ruta a tu archivo de logo aquí. 
         # Puede ser una ruta relativa (ej. 'images/logo.png') o absoluta.
         # Asegúrate de que el archivo exista.
-        logo_path = "/home/eyps/anaconda3/envs/streamlit_venv/assets/icons.png" #![Logo](assets/icons.png)<--- CAMBIA ESTO por la ruta a tu logo
+        logo_path = "![Logo](assets/icons.png)" #![Logo](assets/icons.png)<--- CAMBIA ESTO por la ruta a tu logo
         try:
             # Ajusta el 'width' según el tamaño deseado para tu logo
             st.image(logo_path, width=75) 
