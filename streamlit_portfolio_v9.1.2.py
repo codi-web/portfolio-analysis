@@ -581,7 +581,7 @@ def main():
     # col_run_button, _, _ = st.columns([1, 2, 1]) # Columna central para el botón
     # with col_run_button:
     # Usar un botón más grande o destacado si es posible
-    run_analysis = st.button("🚀 Ejecutar Análisis del Portafolio", type="primary", use_container_width=True)
+    run_analysis = st.button("💼 Ejecutar Análisis del Portafolio", type="primary", use_container_width=True)
 
     # Placeholder para mostrar resultados
     results_placeholder = st.container()
