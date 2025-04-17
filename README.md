@@ -1,17 +1,48 @@
-# Análisis de Portafolio v9.1.2
+# Optimizador y Analizador de Portafolios
 ![Banner](assets/Banner_Portfolio.png)
-
 Esta aplicación web desarrollada con Streamlit permite realizar análisis de portafolio de inversión, incluyendo optimización de cartera, análisis de riesgo y visualización de datos financieros.
 
-## Características
+## Descripción
 
+Esta herramienta permite a los usuarios:
 - Análisis de múltiples activos financieros
-- Optimización de portafolio usando el método de Monte Carlo
-- Cálculo de métricas de riesgo (Ratio de Sharpe, Ratio de Sortino, CVaR)
-- Visualización de datos mediante diferentes tipos de gráficos
-- Comparación con benchmark
+- Descargar y procesar datos históricos de precios para una lista personalizable de activos financieros.
+- Calcular métricas clave de rendimiento y riesgo (Retorno Anualizado, Volatilidad, Sharpe Ratio, Sortino Ratio, CVaR, Beta).
+- Realizar simulaciones de Monte Carlo para visualizar la frontera eficiente.
+- Encontrar portafolios óptimos (Máximo Sharpe Ratio, Mínima Volatilidad).
+- Visualizar diversos aspectos del portafolio y los activos individuales a través de gráficos interactivos.
+- Comparar el rendimiento del portafolio óptimo contra un benchmark seleccionado.
 - Análisis de sensibilidad y escenarios
-- Interfaz de usuario intuitiva y sensible
+
+## Características Principales
+
+- **Gestión de Activos:** Añade o elimina símbolos de activos (tickers) directamente desde la interfaz. Verifica la validez de los símbolos en Yahoo Finance.
+- **Configuración Flexible:** Ajusta el período de análisis (fechas de inicio y fin), el monto de inversión, el número de simulaciones de Monte Carlo, la tasa libre de riesgo y el símbolo del benchmark.
+- **Descarga Robusta de Datos:** Utiliza `yfinance` con reintentos y manejo de errores para obtener los datos. Rellena datos faltantes de forma inteligente.
+- **Métricas Calculadas:**
+    - Retorno Anualizado Esperado
+    - Volatilidad Anualizada (Desviación Estándar)
+    - Ratio de Sharpe
+    - Ratio de Sortino
+    - Conditional Value at Risk (CVaR Diario al 95%)
+    - Beta (Sensibilidad al Benchmark)
+- **Optimización:**
+    - Identificación del Portafolio con Máximo Ratio de Sharpe.
+    - Identificación del Portafolio con Mínima Volatilidad.
+    - Identificación del Portafolio con Máximo Retorno (entre los simulados).
+- **Visualizaciones:**
+    - Precios Históricos Normalizados
+    - Rentabilidad Acumulada por Activo
+    - Distribución de Retornos Diarios (Histograma)
+    - Volatilidad Anualizada por Activo (Gráfico de Barras)
+    - Volatilidad Móvil (30 días)
+    - Matriz de Correlación (Heatmap)
+    - Frontera Eficiente (Scatter Plot de Monte Carlo)
+    - Distribución de Pesos del Portafolio Óptimo (%) (Gráfico de Torta/Donut)
+    - Distribución del Valor del Portafolio Óptimo (€) (Gráfico de Barras)
+    - Comparación Rendimiento Acumulado vs Benchmark
+    - Sensibilidad al Benchmark (Beta por Activo)
+    - Simulación de Escenarios de Crecimiento
 
 ## Requisitos
 
@@ -20,49 +51,41 @@ Esta aplicación web desarrollada con Streamlit permite realizar análisis de po
 
 ## Instalación
 
-1. Clonar el repositorio:
-```bash
-git clone [URL_DEL_REPOSITORIO]
-cd Python_Portafolio
-```
+1.  **Clonar o descargar:** Obtén los archivos del proyecto.
+2.  **Navegar a la carpeta:** Abre una terminal y muévete a la carpeta `porfolio-analysis` o el nombre que elijas.
+    ```bash
+    cd ruta/a/porfolio-analysis
+    ```
+3.  **(Recomendado) Crear un entorno virtual:**
+    ```bash
+    # Linux/macOS
+    python3 -m venv venv
+    source venv/bin/activate
 
-2. Crear y activar entorno virtual:
-```bash
-python -m venv venv
-source venv/bin/activate  # Para Linux/Mac
-# o
-.\venv\Scripts\activate  # Para Windows
-```
-
-3. Instalar dependencias:
-```bash
-pip install -r requirements.txt
-```
+    # Windows
+    python -m venv venv
+    .\venv\Scripts\activate
+    ```
+4.  **Instalar dependencias:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+5.  **Asegurar Recursos:** Asegúrate de que el script `streamlit_portfolio_v9.1.2.py` y la carpeta `assets` (que contiene `icons.png`) estén dentro de la carpeta `PortfolioOptimizerApp`.
 
 ## Uso
 
-1. Activar el entorno virtual (si no está activado):
-```bash
-source venv/bin/activate  # Para Linux/Mac
-# o
-.\venv\Scripts\activate  # Para Windows
-```
-
-2. Ejecutar la aplicación:
-```bash
-streamlit run streamlit_portfolio_v9.1.2.py
-```
-
-3. Abrir el navegador en la dirección indicada (típicamente http://localhost:8501)
-
-## Funcionalidades
-
-### Configuración
-- Agregar/eliminar activos
-- Configurar número de portafolios para simulación
-- Establecer monto total de inversión
-- Seleccionar benchmark
-- Definir período de análisis
+1.  Ejecuta la aplicación Streamlit desde la terminal (asegúrate de estar en la carpeta `PortfolioOptimizerApp` y con el entorno virtual activado si creaste uno):
+    ```bash
+    streamlit run streamlit_portfolio_v9.1.2.py
+    ```
+2.  La aplicación se abrirá en tu navegador web.
+3.  Utiliza la barra lateral ("⚙️ Configuración del Análisis") para:
+    - Añadir o eliminar activos.
+    - Establecer el número de simulaciones, monto de inversión, benchmark, tasa libre de riesgo y rango de fechas.
+    - Seleccionar el tipo de gráfico a visualizar.
+4.  Haz clic en el botón "🚀 Ejecutar Análisis del Portafolio".
+5.  Espera a que se descarguen los datos y se realicen los cálculos.
+6.  Explora los resultados: métricas clave, gráfico seleccionado y tabla de pesos detallados.
 
 ### Análisis
 - Gráfico de precios históricos (Fig 1.)
@@ -113,22 +136,18 @@ streamlit run streamlit_portfolio_v9.1.2.py
 
 ![Fig 13.](assets/scenario_analysis.png)
 
-### Métricas
-- Retorno esperado
-- Volatilidad
-- Ratio de Sharpe
-- Ratio de Sortino
+
 
 ## Estructura del Proyecto
 
 ```
-Python_Portafolio/
-├── assets/
-│   ├── logo.png
+porfolio-analysis/
+├── assets/                   # Carpeta para recursos
+│   ├── logo.png              # Icono de la aplicación (copyright)
 │   └── Fig.png
-├── streamlit_portfolio_v9.py
-├── requirements.txt
-└── README.md
+├── streamlit_portfolio_v9.py # Script principal de la aplicación
+├── requirements.txt          # Dependencias de Python
+└── README.md                 # Este archivo
 
 ```
 
