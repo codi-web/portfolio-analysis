@@ -48,7 +48,7 @@ Esta herramienta permite a los usuarios:
 
 - Python 3.8 o superior
 - Dependencias listadas en `requirements.txt`
-- 
+  
 ## Dependencias Principales
 - streamlit==1.32.0
 - pandas==2.2.1
