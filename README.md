@@ -1,4 +1,4 @@
-# Análisis de Portafolio v9.1.1
+# Análisis de Portafolio v9.1.2
 ![Banner](assets/Banner_Portfolio.png)
 
 Esta aplicación web desarrollada con Streamlit permite realizar análisis de portafolio de inversión, incluyendo optimización de cartera, análisis de riesgo y visualización de datos financieros.
