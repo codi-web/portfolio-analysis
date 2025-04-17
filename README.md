@@ -183,4 +183,5 @@ codi-web
 
 ## Versión
 
-v9.1.2 
+v9.1.1
+V9.1.2 Las imagenes y algunos calculos o formulas han cambiado.
