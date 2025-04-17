@@ -80,7 +80,7 @@ Esta herramienta permite a los usuarios:
     ```bash
     pip install -r requirements.txt
     ```
-5.  **Asegurar Recursos:** Asegúrate de que el script `streamlit_portfolio_v9.1.2.py` y la carpeta `assets` (que contiene `icons.png`) estén dentro de la carpeta `PortfolioOptimizerApp`.
+5.  **Asegurar Recursos:** Asegúrate de que el script `streamlit_portfolio_v9.1.2.py` y la carpeta `assets` (que contiene `icons.png`) estén dentro de la carpeta `porfolio-analysis`.
 
 ## Uso
 
