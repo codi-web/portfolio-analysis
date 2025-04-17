@@ -48,6 +48,16 @@ Esta herramienta permite a los usuarios:
 
 - Python 3.8 o superior
 - Dependencias listadas en `requirements.txt`
+- 
+## Dependencias Principales
+- streamlit==1.32.0
+- pandas==2.2.1
+- numpy==1.26.4
+- yfinance==0.2.37
+- matplotlib==3.8.3
+- seaborn==0.13.2
+- scipy==1.12.0
+- requests==2.31.0
 
 ## Instalación
 
@@ -150,17 +160,6 @@ porfolio-analysis/
 └── README.md                 # Este archivo
 
 ```
-
-## Dependencias Principales
-
-- streamlit==1.32.0
-- pandas==2.2.1
-- numpy==1.26.4
-- yfinance==0.2.37
-- matplotlib==3.8.3
-- seaborn==0.13.2
-- scipy==1.12.0
-- requests==2.31.0
 
 ## Notas
 
