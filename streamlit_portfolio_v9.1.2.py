@@ -1211,6 +1211,17 @@ def main():
                 st.error(f"Ocurrió un error inesperado durante el análisis:")
                 st.exception(e) # Muestra el traceback completo para depuración
 
+
+    # --- Notas / Disclaimer ---
+    st.divider()
+    st.markdown("""
+    ### Notas/ Disclaimer
+    *   La aplicación utiliza datos de Yahoo Finance para obtener precios históricos.
+    *   Se recomienda usar símbolos válidos de Yahoo Finance.
+    *   El análisis se realiza sobre datos históricos y no constituye asesoramiento financiero.
+    *   Los resultados son para fines educativos y de investigación.
+    """)
+
 # --- Ejecución Principal ---
 if __name__ == "__main__":
     main()
