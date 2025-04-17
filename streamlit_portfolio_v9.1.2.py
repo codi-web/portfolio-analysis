@@ -26,7 +26,6 @@ st.set_page_config(
 # Establecer un tema de Seaborn para mejorar la estética de los gráficos
 sns.set_theme(style="whitegrid")
 # Definir una paleta de colores para consistencia (ej: tab10)
-# Usaremos esta paleta en lugar de colores aleatorios
 COLOR_PALETTE = plt.cm.get_cmap('tab10').colors
 
 # --- Funciones de Ayuda ---
@@ -34,7 +33,7 @@ COLOR_PALETTE = plt.cm.get_cmap('tab10').colors
 @st.cache_data # Mantener caché de datos
 def download_data_with_retry(symbols: List[str], start_date: datetime, end_date: datetime, max_retries: int = 3) -> Optional[pd.DataFrame]:
     """Descarga datos de Yahoo Finance con reintentos y manejo de errores mejorado."""
-    # [source: 2], [source: 3], [source: 4], [source: 5], [source: 6], [source: 7], [source: 8]
+ 
     chunk_size = 5
     all_data = []
     symbols_failed = []
@@ -216,8 +215,6 @@ def verify_symbol(symbol: str) -> bool:
         # st.warning(f"Error verificando {symbol}: {e}") # Descomentar para depuración
         return False
 
-
-# [source: 9]
 def sortino_ratio(returns, risk_free_rate=0.0232):
     """Calcula el ratio de Sortino."""
     # Asegurarse que 'returns' es una Serie de pandas
@@ -264,7 +261,6 @@ def sharpe_ratio(returns, risk_free_rate=0.0232):
     sharpe = (expected_return - risk_free_rate) / volatility
     return sharpe if pd.notna(sharpe) else 0.0 # Devolver 0 si el resultado es NaN
 
-# [source: 10]
 def calculate_cvar(returns, confidence_level=0.95):
     """Calcula el Conditional Value at Risk (CVaR) diario."""
      # Asegurarse que 'returns' es una Serie de pandas
@@ -289,8 +285,6 @@ def calculate_cvar(returns, confidence_level=0.95):
     cvar = tail_returns.mean()
     return cvar if pd.notna(cvar) else np.nan
 
-
-# [source: 12]
 def optimize_portfolio(log_returns, cov_matrix, num_assets):
     """Optimiza el portafolio para mínima volatilidad (ejemplo)."""
     # (Código existente) - Asegurar que la función de volatilidad maneje posibles NaNs
@@ -330,8 +324,6 @@ def optimize_portfolio(log_returns, cov_matrix, num_assets):
          # Devolver pesos iniciales como fallback
          return np.array(initial_weights)
 
-
-# [source: 13], [source: 14]
 # --- FUNCIÓN CORREGIDA ---
 def monte_carlo_simulation(log_returns, cov_matrix, num_portfolios, num_assets, risk_free_rate=0.0232):
     """Realiza la simulación de Monte Carlo."""
@@ -412,7 +404,6 @@ def main():
     if 'risk_free_rate' not in st.session_state:
          st.session_state.risk_free_rate = 0.0232 # Tasa libre de riesgo (configurable)
 
-
     # --- Barra Lateral de Configuración (Sidebar) ---
     with st.sidebar:
         st.header("⚙️ Configuración del Análisis")
@@ -432,7 +423,7 @@ def main():
                 if st.button("➕ Añadir", key="add_asset_button", help="Verifica y agrega el símbolo a la lista"):
                     if new_asset:
                         if new_asset not in st.session_state.portfolio_assets:
-                            # [source: 20]
+                       
                             with st.spinner(f"Verificando {new_asset}..."):
                                 if verify_symbol(new_asset):
                                     st.session_state.portfolio_assets.append(new_asset)
@@ -440,7 +431,7 @@ def main():
                                     time.sleep(1) # Pausa para ver el mensaje
                                     st.rerun()
                                 else:
-                                    # [source: 21]
+                                  
                                     st.error(f"❌ Símbolo '{new_asset}' no válido o no encontrado.")
                         else:
                             st.warning(f"⚠️ {new_asset} ya está en la lista.")
@@ -483,7 +474,6 @@ def main():
                  st.write("No hay activos seleccionados.")
 
         st.divider()
-
         # --- Sección de Parámetros ---
         with st.expander("🛠️ Parámetros del Análisis"):
             # [source: 22], [source: 23]
@@ -495,7 +485,7 @@ def main():
                 step=1000,
                 help="Cantidad de portafolios aleatorios a generar. Más simulaciones = más preciso pero más lento."
             )
-            # [source: 24], [source: 25]
+          
             st.session_state.investment_amount = st.number_input(
                 "Monto Total de Inversión (€):",
                 min_value=100.0, # Permitir decimales
@@ -504,7 +494,7 @@ def main():
                 step=100.0,
                 format="%.2f" # Formato con 2 decimales
             )
-            # [source: 26]
+         
             st.session_state.benchmark_symbol = st.text_input(
                 "Símbolo del Benchmark:",
                 value=st.session_state.benchmark_symbol,
@@ -685,7 +675,6 @@ def main():
                          st.session_state.portfolio_assets = actual_assets_analyzed
                          st.warning(f"Activos con datos insuficientes para cálculo de retornos eliminados. Analizando {num_assets} activos.")
 
-
                     # Calcular matriz de covarianza anualizada
                     # Manejar caso de un solo activo
                     if num_assets > 1:
@@ -701,9 +690,8 @@ def main():
                          st.info(f"Matriz de covarianza:\n{cov_matrix}")
                          st.stop()
 
-
                     # Realizar simulación de Monte Carlo
-                    # [source: 36], [source: 37]
+                    #
                     mc_returns, mc_volatility, mc_sharpe, mc_weights = monte_carlo_simulation(
                         log_returns,
                         cov_matrix,
@@ -829,7 +817,7 @@ def main():
 
 
                 elif selected_graph == "Fig 2. Rentabilidad Simple":
-                    # [source: 40], [source: 41]
+                    # 
                     if not log_returns_plot.empty:
                         daily_cumulative_returns = (log_returns_plot + 1).cumprod()
                         for i, asset in enumerate(daily_cumulative_returns.columns):
@@ -844,7 +832,7 @@ def main():
 
 
                 elif selected_graph == "Fig 3. Histograma de Retornos":
-                     # [source: 42]
+                     # 
                      if not log_returns_plot.empty:
                         for i, asset in enumerate(log_returns_plot.columns):
                             sns.histplot(log_returns_plot[asset], ax=ax, label=asset, bins=50, alpha=0.6, kde=True, color=plot_colors[i], stat="density") # Usar densidad
@@ -857,7 +845,7 @@ def main():
 
 
                 elif selected_graph == "Fig 4. Gráfico de Volatilidad":
-                    # [source: 43]
+                    # 
                     if not log_returns_plot.empty:
                         volatility = log_returns_plot.std() * np.sqrt(252) # Volatilidad anualizada
                         volatility = volatility.sort_values(ascending=True) # Ordenar ascendente
@@ -872,7 +860,7 @@ def main():
 
 
                 elif selected_graph == "Fig 5. Volatilidad rentabilidad": # Cambiado a Volatilidad Móvil
-                     # [source: 44]
+                     # 
                     if not log_returns_plot.empty:
                          rolling_window = 30
                          rolling_vol = log_returns_plot.rolling(window=rolling_window).std() * np.sqrt(252) # Volatilidad móvil anualizada
@@ -894,7 +882,7 @@ def main():
 
 
                 elif selected_graph == "Fig 6. Matriz de correlación":
-                    # [source: 45], [source: 46]
+                    # 
                     if not log_returns_plot.empty and num_assets > 1:
                         corr_matrix = log_returns_plot.corr()
                         annot_size = 8 if num_assets > 15 else 10
@@ -915,7 +903,7 @@ def main():
 
 
                 elif selected_graph == "Fig 7. Simulación de Monte Carlo":
-                    # [source: 47], [source: 48], [source: 49], [source: 50], [source: 51]
+                    # 
                     if len(mc_returns) > 0: # Verificar que haya resultados de MC
                         # Muestreo para visualización si hay demasiados puntos
                         max_points_plot = 10000
@@ -1012,7 +1000,7 @@ def main():
 
 
                 elif selected_graph == "Fig 8A. Distribución del valor en €":
-                    # [source: 53], [source: 54], [source: 55], [source: 56]
+                    # 
                     if optimal_weights is not None and len(optimal_weights) == len(actual_assets_analyzed):
                         valores_euros = pd.Series(
                             [w * st.session_state.investment_amount for w in optimal_weights],
@@ -1055,7 +1043,7 @@ def main():
 
 
                 elif selected_graph == "Fig 11. Comparación con Benchmark":
-                    # [source: 59], [source: 60], [source: 61]
+                    # 
                     if benchmark_prices is not None and not benchmark_prices.empty and not optimal_portfolio_log_returns.empty:
                         # Calcular retornos simples diarios
                         portfolio_simple_returns = np.exp(optimal_portfolio_log_returns) - 1
@@ -1135,7 +1123,7 @@ def main():
 
 
                 elif selected_graph == "Fig 13. Análisis de Escenarios":
-                     # [source: 71], [source: 72], [source: 73], [source: 74], [source: 75], [source: 76], [source: 77], [source: 78]
+                     # 
                      if not optimal_portfolio_log_returns.empty:
                          # Usar retornos simples del portafolio óptimo
                          portfolio_simple_returns = np.exp(optimal_portfolio_log_returns) - 1
