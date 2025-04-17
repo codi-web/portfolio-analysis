@@ -84,7 +84,7 @@ Esta herramienta permite a los usuarios:
 
 ## Uso
 
-1.  Ejecuta la aplicación Streamlit desde la terminal (asegúrate de estar en la carpeta `PortfolioOptimizerApp` y con el entorno virtual activado si creaste uno):
+1.  Ejecuta la aplicación Streamlit desde la terminal (asegúrate de estar en la carpeta `porfolio-analysis` y con el entorno virtual activado si creaste uno):
     ```bash
     streamlit run streamlit_portfolio_v9.1.2.py
     ```
