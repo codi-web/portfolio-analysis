@@ -184,4 +184,5 @@ codi-web
 ## Versión
 
 v9.1.1
-V9.1.2 Las imagenes y algunos calculos o formulas han cambiado.
+V9.1.2 
+## Las figuras o imágenes y algunos cálculos o fórmulas han cambiado en vla version 9.1.2.
