@@ -93,7 +93,7 @@ Esta herramienta permite a los usuarios:
     - Añadir o eliminar activos.
     - Establecer el número de simulaciones, monto de inversión, benchmark, tasa libre de riesgo y rango de fechas.
     - Seleccionar el tipo de gráfico a visualizar.
-4.  Haz clic en el botón "🚀 Ejecutar Análisis del Portafolio".
+4.  Haz clic en el botón "💼 Ejecutar Análisis del Portafolio".
 5.  Espera a que se descarguen los datos y se realicen los cálculos.
 6.  Explora los resultados: métricas clave, gráfico seleccionado y tabla de pesos detallados.
 
