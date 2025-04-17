@@ -50,7 +50,7 @@ source venv/bin/activate  # Para Linux/Mac
 
 2. Ejecutar la aplicación:
 ```bash
-streamlit run streamlit_portfolio_v9.1.1.py
+streamlit run streamlit_portfolio_v9.1.2.py
 ```
 
 3. Abrir el navegador en la dirección indicada (típicamente http://localhost:8501)
@@ -164,4 +164,4 @@ codi-web
 
 ## Versión
 
-v9.1.1 
+v9.1.2 
