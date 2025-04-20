@@ -378,7 +378,7 @@ def main():
         st.image("assets/icons.png", width=80)  # Asegúrate que el archivo se llame "icono.png"
 
     with col2:
-        st.title("Optimizador y Analizador de Portafolios v9.1.2")
+        st.title("Optimizador y Analizador de Portafolios v1.1")
         st.markdown("Una herramienta interactiva para analizar y optimizar portafolios de inversión.")
     # --- Inicialización del Estado de Sesión ---
     # Usar claves descriptivas y valores por defecto razonables
