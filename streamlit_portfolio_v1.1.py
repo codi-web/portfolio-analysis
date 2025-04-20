@@ -781,7 +781,7 @@ def main():
                     st.metric(label="Ratio de Sharpe", value=f"{min_vol_sharpe:.2f}" if np.isfinite(min_vol_sharpe) else "N/A")
 
                 st.write("---")
-                st.subheader(f"🖼️ Gráfico Seleccionado: {selected_graph_label}")
+                st.subheader(f"📊 Gráfico Seleccionado: {selected_graph_label}")
 
 
                 # --- Generación del Gráfico Seleccionado ---
