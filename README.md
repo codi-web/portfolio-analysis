@@ -183,4 +183,4 @@ codi-web
 ## Versión
 
 - v1.0
-- V1.1 : Las figuras o imágenes y algunos cálculos o fórmulas han cambiado en la version 9.1.2.
+- V1.1 : Las figuras o imágenes y algunos cálculos o fórmulas han cambiado en la version 1.1.
