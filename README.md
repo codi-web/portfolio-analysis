@@ -50,10 +50,10 @@ Esta herramienta permite a los usuarios:
 - Dependencias listadas en `requirements.txt`
   
 ## Dependencias Principales
-- streamlit==1.32.0
+- streamlit==1.34.0
 - pandas==2.2.1
 - numpy==1.26.4
-- yfinance==0.2.37
+- yfinance==0.2.55
 - matplotlib==3.8.3
 - seaborn==0.13.2
 - scipy==1.12.0
@@ -80,13 +80,13 @@ Esta herramienta permite a los usuarios:
     ```bash
     pip install -r requirements.txt
     ```
-5.  **Asegurar Recursos:** Asegúrate de que el script `streamlit_portfolio_v9.1.2.py` y la carpeta `assets` (que contiene `icons.png`) estén dentro de la carpeta `porfolio-analysis`.
+5.  **Asegurar Recursos:** Asegúrate de que el script `streamlit_portfolio_v1.1.py` y la carpeta `assets` (que contiene `icons.png`) estén dentro de la carpeta `porfolio-analysis`.
 
 ## Uso
 
 1.  Ejecuta la aplicación Streamlit desde la terminal (asegúrate de estar en la carpeta `porfolio-analysis` y con el entorno virtual activado si creaste uno):
     ```bash
-    streamlit run streamlit_portfolio_v9.1.2.py
+    streamlit run streamlit_portfolio_v1.1.py
     ```
 2.  La aplicación se abrirá en tu navegador web.
 3.  Utiliza la barra lateral ("⚙️ Configuración del Análisis") para:
